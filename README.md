@@ -8,7 +8,7 @@ This repository contains the source file for my personal portfolio website.
 
 ## About
 
-I am a Data Analyst with an MSc in Data Science and project experience across SQL, Python, Power BI, DAX, machine learning and explainable AI. My work covers business intelligence, job-market analytics, customer behaviour, predictive modelling and NLP-based review analysis.
+I am a Data Analyst completing an MSc in Data Science at Liverpool John Moores University (expected 2026), with my thesis project completed. My project experience across SQL, Python, Power BI, DAX, machine learning and explainable AI. My work covers business intelligence, job-market analytics, customer behaviour, predictive modelling and NLP-based review analysis.
 
 ## Featured projects
 
