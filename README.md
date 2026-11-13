@@ -51,3 +51,10 @@ The Vercel project should use **Root Directory: `site`**, **Framework: Vite**, a
 ## Resume
 
 The portfolio includes a current downloadable resume PDF linked from the navigation and contact section.
+
+
+## Live portfolio
+
+Vercel deployment: https://eshwar-ramesh-portfolio.vercel.app
+
+The site is a responsive portfolio for an aspiring Data Analyst and website developer, featuring real dashboard screenshots from the GitHub project work and a section reserved for future live website case studies.
