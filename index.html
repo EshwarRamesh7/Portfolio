@@ -50,9 +50,39 @@ section{scroll-margin-top:90px}.about-grid{gap:65px}.service{min-height:285px;pa
 .live-card:nth-of-type(1){border-color:rgba(201,153,88,.22)}.live-card:nth-of-type(2){border-color:rgba(183,243,74,.22)}
 .data-numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin:10px auto 70px;width:min(1120px,92%);border:1px solid var(--line);border-radius:24px;overflow:hidden;background:var(--line)}.data-number{padding:25px 18px;background:rgba(8,19,15,.92);text-align:center}.data-number b{display:block;font:700 32px 'Space Grotesk';color:#f3f8f4}.data-number span{display:block;margin-top:7px;font-size:10px;letter-spacing:.13em;color:#91a49c}.data-number .count{font-variant-numeric:tabular-nums}
 @media(max-width:850px){.analytics-orbit{right:-8px;top:18px;transform:scale(.8) rotateX(55deg) rotateZ(-12deg)}.data-numbers{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.analytics-orbit{right:-20px;top:8px;transform:scale(.62) rotateX(55deg) rotateZ(-12deg)}.data-numbers{grid-template-columns:1fr 1fr}.data-number{padding:20px 10px}.data-number b{font-size:26px}}
+
+/* immersive background design layer */
+body{position:relative;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:
+radial-gradient(circle at 8% 18%,rgba(53,217,255,.13) 0 1px,transparent 2px),
+radial-gradient(circle at 72% 12%,rgba(168,117,255,.13) 0 1px,transparent 2px),
+radial-gradient(circle at 88% 62%,rgba(184,255,61,.11) 0 1px,transparent 2px),
+radial-gradient(circle at 35% 78%,rgba(53,217,255,.08) 0 1px,transparent 2px),
+linear-gradient(115deg,transparent 0 48%,rgba(53,217,255,.035) 49%,transparent 50%),
+linear-gradient(65deg,transparent 0 58%,rgba(168,117,255,.035) 59%,transparent 60%);
+background-size:280px 280px,360px 360px,420px 420px,330px 330px,420px 420px,520px 520px;
+animation:ambientDrift 28s linear infinite}
+body:after{content:"";position:fixed;inset:-10%;z-index:-2;pointer-events:none;background:
+linear-gradient(90deg,transparent 0 49.7%,rgba(53,217,255,.045) 50%,transparent 50.3%),
+linear-gradient(0deg,transparent 0 49.7%,rgba(168,117,255,.035) 50%,transparent 50.3%);
+background-size:90px 90px;
+mask-image:radial-gradient(circle at center,black 0%,transparent 72%);
+opacity:.7;animation:gridDrift 24s linear infinite}
+@keyframes ambientDrift{to{background-position:40px 60px,-50px 30px,30px -40px,-30px 45px,80px 20px,-60px 70px}}
+.background-orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.background-orbs:before,.background-orbs:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.7}
+.background-orbs:before{width:420px;height:420px;left:-180px;top:38%;border:1px solid rgba(53,217,255,.12);box-shadow:0 0 90px rgba(53,217,255,.06),inset 0 0 80px rgba(53,217,255,.025);animation:orbFloat 12s ease-in-out infinite}
+.background-orbs:after{width:330px;height:330px;right:-120px;top:64%;border:1px solid rgba(168,117,255,.14);box-shadow:0 0 100px rgba(168,117,255,.07),inset 0 0 70px rgba(168,117,255,.025);animation:orbFloat 15s ease-in-out infinite reverse}
+@keyframes orbFloat{50%{transform:translate3d(0,-28px,0) scale(1.03)}}
+.data-lines{position:fixed;right:6%;top:35%;width:190px;height:190px;z-index:-1;pointer-events:none;opacity:.28}
+.data-lines:before,.data-lines:after{content:"";position:absolute;inset:0;background:
+linear-gradient(135deg,transparent 48%,rgba(53,217,255,.7) 49%,transparent 50%),
+linear-gradient(45deg,transparent 48%,rgba(184,255,61,.65) 49%,transparent 50%);
+background-size:95px 95px;transform:rotate(8deg)}
+.data-lines:after{transform:rotate(-8deg);opacity:.5}
 </style></style>
 </head>
-<body>
+<body><div class="background-orbs" aria-hidden="true"></div><div class="data-lines" aria-hidden="true"></div>
 <header class="nav"><a class="logo" href="#top">Eshwar Ramesh<b>.</b></a><nav class="navlinks"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#live">Live designs</a><a href="#contact">Contact</a></nav><a class="navcta" href="mailto:eshwarramesh1985@gmail.com">Let's talk</a></header>
 
 <main>
